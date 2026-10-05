@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0c0b0a;--bg2:#141210;--fg:#efe9dd;--mute:#9b9488;--gold:#c8a96a;--red:#a3212d;--line:#2a2622;--mx:50%;--my:30%}
-,::before,*::after{box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.7 "Instrument Sans",system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px);overflow-x:hidden}
 a{color:inherit}
@@ -20,13 +20,13 @@ a{color:inherit}
 .wrap{max-width:1140px;margin:0 auto;padding:0 1.25rem;position:relative}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 #glow{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(520px circle at var(--mx) var(--my),rgba(200,169,106,.13),transparent 60%)}
-
+ 
 #load{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;transition:opacity .9s .2s,visibility 0s 1.1s}
 #load div{text-align:center;font:600 clamp(2.4rem,9vw,4.5rem)/1 "Cormorant Garamond",serif;letter-spacing:.18em;color:var(--fg)}
 #load i{display:block;height:1px;margin:1rem auto 0;width:0;background:var(--gold);animation:ln 1.3s ease forwards}
 @keyframes ln{to{width:100%}}
 #load.done{opacity:0;visibility:hidden}
-
+ 
 header{position:fixed;top:0;left:0;right:0;z-index:30;padding-top:env(safe-area-inset-top,0px);transition:background .4s,backdrop-filter .4s}
 header.solid{background:rgba(12,11,10,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
@@ -37,7 +37,7 @@ nav a{text-decoration:none;color:var(--mute);transition:color .3s}nav a:hover{co
 .btn:hover{box-shadow:0 0 36px rgba(200,169,106,.45)}
 .btn.alt{background:transparent;color:var(--gold)}.btn.alt:hover{background:var(--gold);color:#17120a}
 .cta{display:flex;gap:.8rem;flex-wrap:wrap}
-
+ 
 .hero{min-height:100svh;display:grid;align-items:center;position:relative;overflow:hidden;padding:7rem 0 4rem}
 .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:drift 18s ease-in-out infinite alternate}
 .o1{width:420px;height:420px;background:var(--red);top:-80px;right:-100px}
@@ -50,12 +50,12 @@ h1 em{color:var(--gold);font-style:italic}
 .ch{display:inline-block;opacity:0;transform:translateY(60%) rotate(4deg);transition:opacity 1s,transform 1.1s cubic-bezier(.2,.8,.2,1)}
 .go .ch{opacity:1;transform:none}
 .sub{max-width:36ch;color:var(--mute);font-size:1.15rem;margin:0 0 2rem}
-
+ 
 .ticker{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:.9rem 0;position:relative;z-index:2;background:var(--bg)}
 .ticker div{display:inline-block;animation:tick 40s linear infinite;font:italic 500 1.7rem "Cormorant Garamond",serif;color:var(--gold)}
 .ticker span{margin:0 1.6rem}.ticker span:nth-child(even){color:var(--mute);font-style:normal}
 @keyframes tick{to{transform:translateX(-50%)}}
-
+ 
 section{padding:6rem 0;position:relative;z-index:2}
 h2{font:500 clamp(2.6rem,8vw,5.2rem)/1 "Cormorant Garamond",serif;margin:0 0 1rem}
 h2 em{color:var(--gold)}
@@ -65,7 +65,7 @@ h2 em{color:var(--gold)}
 .panel{background:linear-gradient(160deg,var(--bg2),#0f0d0c);border:1px solid var(--line);border-radius:22px;padding:1.6rem;position:relative;overflow:hidden}
 .panel::before{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--px,50%) var(--py,0%),rgba(200,169,106,.12),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
 .panel:hover::before{opacity:1}
-
+ 
 .shop,.tools{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:start}
 .tools{grid-template-columns:1fr 1fr}
 .stage{perspective:1000px;display:grid;place-items:center;min-height:360px}
@@ -97,7 +97,7 @@ input:focus{border-color:var(--gold);outline:0}
 .qty output{font:500 1.8rem "Cormorant Garamond",serif;min-width:2ch;text-align:center}
 .note{font-size:.85rem;color:var(--mute);margin:.7rem 0 0}
 .hint{color:var(--gold);min-height:1.7em;margin:.4rem 0 0;font-size:.95rem}
-
+ 
 .join{text-align:center;border-top:1px solid var(--line);overflow:hidden}
 .join h2{font-size:clamp(3.2rem,13vw,9rem);line-height:.92}
 .join .lead{margin-inline:auto}.join .cta{justify-content:center}
@@ -112,7 +112,7 @@ footer a{margin-right:1.2rem}
 <body>
 <div id="glow" aria-hidden="true"></div>
 <div id="load" aria-hidden="true"><div>VTEEN<i></i></div></div>
-
+ 
 <header id="hd">
   <div class="wrap">
     <a class="logo" href="#top">VTEEN</a>
@@ -122,7 +122,7 @@ footer a{margin-right:1.2rem}
     </nav>
   </div>
 </header>
-
+ 
 <main id="top">
   <div class="hero" id="hero">
     <div class="orb o1"></div><div class="orb o2"></div>
@@ -141,7 +141,7 @@ footer a{margin-right:1.2rem}
     </div>
   </div>
   <div class="ticker" aria-hidden="true"><div id="tick"></div></div>
-
+ 
   <section id="koleksi">
     <div class="wrap">
       <h2 class="rv">Koleksi <em>Vol.1</em></h2>
@@ -172,7 +172,7 @@ footer a{margin-right:1.2rem}
       </div>
     </div>
   </section>
-
+ 
   <section id="pace" style="padding-top:1rem">
     <div class="wrap">
       <h2 class="rv">Alat <em>lari</em></h2>
@@ -193,7 +193,7 @@ footer a{margin-right:1.2rem}
       </div>
     </div>
   </section>
-
+ 
   <section class="join" id="gabung">
     <div class="wrap">
       <h2 class="rv">Lari bareng <em>VTEEN</em></h2>
@@ -202,9 +202,9 @@ footer a{margin-right:1.2rem}
     </div>
   </section>
 </main>
-
+ 
 <footer><div class="wrap"><span>© 2026 VTEEN.CLUB</span><span><a href="https://instagram.com/vteenclub" target="_blank" rel="noopener">@vteenclub</a><a href="https://linktr.ee/vteenclub" target="_blank" rel="noopener">linktr.ee/vteenclub</a></span></div></footer>
-
+ 
 <script>
 /* ===== PENGATURAN ===== */
 const CONFIG={wa:"",ig:"https://ig.me/m/vteenclub"}; // wa: 628xxxxxxxxxx (kosong = salin pesan + buka DM Instagram)
@@ -212,7 +212,7 @@ const CONFIG={wa:"",ig:"https://ig.me/m/vteenclub"}; // wa: 628xxxxxxxxxx (koson
 const $=id=>document.getElementById(id);
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fine=matchMedia("(pointer:fine)").matches;
-
+ 
 /* pecah huruf judul */
 const h1=$("h1");let n=0;
 (function split(node){[...node.childNodes].forEach(c=>{
@@ -221,35 +221,35 @@ const h1=$("h1");let n=0;
 /* loader */
 addEventListener("load",()=>setTimeout(()=>{$("load").classList.add("done");document.body.classList.add("go");h1.classList.add("go")},reduce?0:1500));
 setTimeout(()=>{$("load").classList.add("done");h1.classList.add("go")},4000);
-
+ 
 /* ticker */
 $("tick").innerHTML=("<span>Enjoy Your Run</span><span>✦</span><span>Vol.1</span><span>✦</span><span>VTEEN.CLUB</span><span>✦</span>").repeat(8);
-
+ 
 /* header */
 addEventListener("scroll",()=>$("hd").classList.toggle("solid",scrollY>40),{passive:true});
-
+ 
 /* cahaya mengikuti kursor + kilau panel */
 if(fine){
   addEventListener("pointermove",e=>{document.documentElement.style.setProperty("--mx",e.clientX+"px");document.documentElement.style.setProperty("--my",e.clientY+"px")});
   document.querySelectorAll(".panel").forEach(p=>p.addEventListener("pointermove",e=>{const r=p.getBoundingClientRect();p.style.setProperty("--px",e.clientX-r.left+"px");p.style.setProperty("--py",e.clientY-r.top+"px")}));
   /* tombol magnetik */
   document.querySelectorAll(".mag").forEach(b=>{
-    b.addEventListener("pointermove",e=>{const r=b.getBoundingClientRect();b.style.transform=translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)});
+    b.addEventListener("pointermove",e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});
     b.addEventListener("pointerleave",()=>b.style.transform="");
   });
 }
 /* kaos miring mengikuti pointer */
 const st=$("stage"),tl=$("tilt");
 if(!reduce){
-  st.addEventListener("pointermove",e=>{const r=st.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tl.style.transform=rotateY(${x*28}deg) rotateX(${-y*22}deg)});
+  st.addEventListener("pointermove",e=>{const r=st.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tl.style.transform=`rotateY(${x*28}deg) rotateX(${-y*22}deg)`});
   st.addEventListener("pointerleave",()=>tl.style.transform="");
 }
 document.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{$("tee").classList.toggle("flip",b.dataset.side==="1");document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed",x===b))});
-
+ 
 /* muncul saat scroll */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll(".rv").forEach(el=>io.observe(el));
-
+ 
 /* ukuran + pesan */
 const SZ={S:[69,50],M:[71,52],L:[73,54],XL:[75,56]};let size="M",qty=1;
 const sB=[...$("sizes").children];
@@ -257,15 +257,15 @@ function setSize(s){size=s;sB.forEach(x=>x.setAttribute("aria-pressed",x.textCon
 sB.forEach(b=>b.onclick=()=>setSize(b.textContent));
 $("mine").oninput=e=>{const v=parseFloat(e.target.value);if(!v){$("hint").textContent="";return}
   let best="S",d=1e9;for(const k in SZ){const x=Math.abs(SZ[k][1]-v);if(x<d){d=x;best=k}}
-  setSize(best);$("hint").textContent=d===0?Pas di ukuran ${best}.:Terdekat: ${best} (selisih ${d} cm).};
+  setSize(best);$("hint").textContent=d===0?`Pas di ukuran ${best}.`:`Terdekat: ${best} (selisih ${d} cm).`};
 $("minus").onclick=()=>{qty=Math.max(1,qty-1);$("qty").textContent=qty};
 $("plus").onclick=()=>{qty=Math.min(20,qty+1);$("qty").textContent=qty};
 $("order").onclick=()=>{
-  const msg=Halo VTEEN.CLUB, saya mau pesan kaos Vol.1.\nNama: ${$("name").value.trim()||"(isi nama)"}\nUkuran: ${size}\nJumlah: ${qty};
-  if(CONFIG.wa){open(https://wa.me/${CONFIG.wa}?text=${encodeURIComponent(msg)},"_blank");return}
+  const msg=`Halo VTEEN.CLUB, saya mau pesan kaos Vol.1.\nNama: ${$("name").value.trim()||"(isi nama)"}\nUkuran: ${size}\nJumlah: ${qty}`;
+  if(CONFIG.wa){open(`https://wa.me/${CONFIG.wa}?text=${encodeURIComponent(msg)}`,"_blank");return}
   (navigator.clipboard?navigator.clipboard.writeText(msg):Promise.reject()).then(()=>$("orderNote").textContent="Pesan disalin. Tempel di DM Instagram yang terbuka.",()=>$("orderNote").textContent="Salin lalu kirim di DM: "+msg.replace(/\n/g," | ")).finally(()=>open(CONFIG.ig,"_blank"));
 };
-
+ 
 /* pace */
 const fmt=t=>{t=Math.round(t);const h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return (h?h+":"+String(m).padStart(2,"0"):m)+":"+String(s).padStart(2,"0")};
 function calc(){const km=parseFloat($("km").value),T=(+$("h").value||0)*3600+(+$("m").value||0)*60+(+$("s").value||0);
@@ -276,3 +276,4 @@ function calc(){const km=parseFloat($("km").value),T=(+$("h").value||0)*3600+(+$
 </script>
 </body>
 </html>
+ 
